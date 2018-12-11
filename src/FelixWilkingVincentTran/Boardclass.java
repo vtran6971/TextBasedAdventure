@@ -9,12 +9,12 @@ public class Boardclass {
 
     public void printboard(){
         for(Boardobject[] y : this.board){
-            for(Boardobject[] x : this.board){
-                if(x[0] == null){
+            for(Boardobject x : y){
+                if(x == null){
                     System.out.print("- ");
                 }
                 else{
-                    System.out.print(x[0].getName() + " ");
+                    System.out.print(x.getSymbol() + " ");
                 }
             }
             System.out.println();
