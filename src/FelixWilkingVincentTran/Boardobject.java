@@ -1,19 +1,20 @@
 package FelixWilkingVincentTran;
 
+import static java.lang.Character.toUpperCase;
+
 public class Boardobject {
     private char symbol;
     private String name;
 
-    public Boardobject(String name, char symbol){
-        this.name = name;
-        this.symbol = symbol;
+    public Boardobject(){
+        this.name = generateName();
     }
 
     public String generateName(){
-        String letters = "abcdefghijklmnopqrstuvwxyz";
-        String vowels = "aeiou";
+        String letters = "bcdfghjklmnpqrstvwxyztaointn";
+        String vowels = "aeiouea-";
         String name = "";
-        for(int i = 0; i < ((int) (Math.random() * 5)); i++){
+        for(int i = 0; i < ((int) (Math.random() * 4 + 3)); i++){
             name += letters.charAt((int) (Math.random() * letters.length()));
             name += vowels.charAt((int) (Math.random() * vowels.length()));
         }
@@ -21,11 +22,11 @@ public class Boardobject {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public char getSymbol() {
-        return symbol;
+        return this.name.charAt(0);
     }
 
 }

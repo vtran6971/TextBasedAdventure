@@ -5,8 +5,13 @@ import java.util.List;
 
 public class planet extends Boardobject {
     public static List<planet> planets = new ArrayList<>();
-    public planet(String name, char symbol) {
-        super(name, symbol);
+    private int size;
+    private char symbol;
+    private String name;
+
+    public planet(int size) {
+        super();
+        this.size = size;
         planet.planets.add(this);
     }
 }

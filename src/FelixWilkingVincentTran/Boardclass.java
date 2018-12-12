@@ -4,6 +4,7 @@ public class Boardclass {
     private Boardobject[][] board;
 
     public Boardclass(Boardobject[][] board){
+
         this.board = board;
     }
 
@@ -11,13 +12,25 @@ public class Boardclass {
         for(Boardobject[] y : this.board){
             for(Boardobject x : y){
                 if(x == null){
-                    System.out.print("- ");
+                    System.out.print("  ");
                 }
                 else{
                     System.out.print(x.getSymbol() + " ");
                 }
             }
             System.out.println();
+        }
+    }
+
+    public void move(int x1, int y1, int x2, int y2){
+        Boardobject placeholder = this.board[x1][y1];
+        this.board[x1][y1] = null;
+        this.board[x2][y2] = placeholder;
+    }
+
+    public void moveplayer(playerclass player, String direction){
+        if(direction.equals("w")){
+
         }
     }
 }
