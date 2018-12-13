@@ -13,7 +13,9 @@ public class Main {
         for(int i = 0; i < difficulty; i++) {
             boardarray[(int) (Math.random() * boardlength)][(int) (Math.random() * boardlength)] = new planet(3);
         }
-        boardarray[x][y] = new playerclass("Hello");
+        playerclass player1 = new playerclass("Jaune", 0, 0);
+        System.out.println(player1.xLoc +" "+ player1.yLoc);
+       
         Boardclass board = new Boardclass(boardarray);
         board.printboard();
     }

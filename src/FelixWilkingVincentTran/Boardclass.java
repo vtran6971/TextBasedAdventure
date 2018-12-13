@@ -1,5 +1,7 @@
 package FelixWilkingVincentTran;
 
+import java.util.Scanner;
+
 public class Boardclass {
     private Boardobject[][] board;
 
@@ -29,7 +31,18 @@ public class Boardclass {
     }
 
     public void moveplayer(playerclass player, String direction){
-        if(direction.equals("w")){
+
+        Scanner input = new Scanner(System.in);
+        if(input.equals("n")){
+
+        }
+        if(input.equals("w")){
+
+        }
+        if(input.equals("e")){
+
+        }
+        if(input.equals("s")){
 
         }
     }
