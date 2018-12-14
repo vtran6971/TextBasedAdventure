@@ -4,7 +4,7 @@ import static java.lang.Character.toUpperCase;
 
 public class Boardobject {
     private char symbol;
-    private String name;
+    public String name;
 
     public Boardobject(){
         this.name = generateName();
@@ -21,12 +21,13 @@ public class Boardobject {
         return name;
     }
 
+
     public String getName() {
         return this.name;
     }
 
     public char getSymbol() {
-        return this.name.charAt(0);
+        return this.getName().charAt(0);
     }
 
 }

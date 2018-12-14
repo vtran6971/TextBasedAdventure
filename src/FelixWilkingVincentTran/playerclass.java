@@ -5,9 +5,16 @@ public class playerclass extends Boardobject {
 
     public playerclass(String name, int xLoc, int yLoc){
         this.name = name;
+        this.xLoc = xLoc;
+        this.yLoc = yLoc;
     }
 
     int xLoc, yLoc;
+
+    public String getName()
+    {
+        return name;
+    }
 
     public int getxLoc()
     {
