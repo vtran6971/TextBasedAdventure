@@ -19,7 +19,5 @@ public class Main {
        
         Boardclass board = new Boardclass(boardarray);
         board.printboard();
-        System.out.print(board.arr[0][0].getName());
-       // System.out.print(player1.getName());
     }
 }
