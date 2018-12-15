@@ -30,18 +30,22 @@ public class Boardclass {
         this.arr[x2][y2] = placeholder;
     }
 
-    public void moveplayer(playerclass player, String direction){
+    public static boolean moveplayer(playerclass player, String direction, Boardclass[][] board){
+
 
         Scanner input = new Scanner(System.in);
         if(input.equals("n")){
-
+        board[player.xLoc][player.North()];
         }
+
         if(input.equals("w")){
 
         }
+
         if(input.equals("e")){
 
         }
+
         if(input.equals("s")){
 
         }
