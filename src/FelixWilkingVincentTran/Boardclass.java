@@ -32,11 +32,11 @@ public class Boardclass {
         this.arr[x2][y2] = placeholder;
     }*/
 
-    public static boolean moveplayer(playerclass player, Boardobject[][] board, String input){
+    public static boolean moveplayer(playerclass player, Boardobject[][] board, String input, int length){
 
         int x = player.getxLoc();
         int y = player.getyLoc();
-        System.out.println(input);
+        String Holder = "";
 
 
             if (input.equals("n")) {
@@ -48,17 +48,22 @@ public class Boardclass {
             }
 
             if (input.equals("e")) {
-                System.out.println(input);
-                player.setyLoc(y + 1);
-                board[player.xLoc][player.yLoc] = player;
-                System.out.println(player.xLoc+" "+ player.yLoc);
-                return true;
+                if (player.getyLoc() != length-1) {
+                    player.setyLoc(y + 1);
+                    //Holder = board[player.xLoc][player.yLoc];
+                    board[player.xLoc][player.yLoc] = player;
+                    System.out.println(player.xLoc + " " + player.yLoc);
+                }
+                if (player.getyLoc() == length-1) {
+                    System.out.println("Your move is invalid please try a different one!");
+                    return false;
+                }
             }
 
             if (input.equals("s")) {
 
             }
-            return false;
+            return true;
 
     }
 }
