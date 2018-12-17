@@ -21,6 +21,7 @@ public class Main {
             boardarray[(int) (randomX)][(int) (randomY)] = new planet(3);
         }
 
+        //Loops through every spot in the array and if it has no planet, fills the spot with ab empty space
         for (int j = 0; j < boardlength; j++)
         {
             if (boardarray[x][j] == null) {
@@ -39,14 +40,17 @@ public class Main {
             }
         }
 
-        playerclass player1 = new playerclass("Jaune", 0, 0); //Initialize the player's name, and x and y coordinates
-        boardarray[player1.xLoc][player1.yLoc] = player1; //Places player into the array/map
+        //Creates the player and inserts them into the map
+        playerclass player1 = new playerclass("Jaune", 0, 0);
+        boardarray[player1.xLoc][player1.yLoc] = player1;
         System.out.println(player1.xLoc +" "+ player1.yLoc);
 
         Boardclass board = new Boardclass(boardarray);
         board.printboard();
 
-        System.out.println("This is a spot and contains "+ boardarray[1][0].getName());
+        System.out.println("You have entered the map at "+player1.xLoc +" "+ player1.yLoc + " " + boardarray[0][0].getName());
+        System.out.println("Please pick a direction to move n,e,s,w");
+
 
         //Scans for user input and will move player accordingly North/West/East/South
         while (true) {

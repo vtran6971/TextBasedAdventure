@@ -36,7 +36,7 @@ public class Boardclass {
 
         int x = player.getxLoc();
         int y = player.getyLoc();
-        String Holder = "";
+        String Hold = " ";
 
 
             if (input.equals("n")) {
@@ -49,10 +49,11 @@ public class Boardclass {
 
             if (input.equals("e")) {
                 if (player.getyLoc() != length-1) {
+                    Hold = board[player.xLoc][player.yLoc+1].getName();
                     player.setyLoc(y + 1);
-                    //Holder = board[player.xLoc][player.yLoc];
                     board[player.xLoc][player.yLoc] = player;
-                    System.out.println(player.xLoc + " " + player.yLoc);
+                    System.out.println("Your location is now " + player.xLoc + " " + player.yLoc);
+                    System.out.println("You are in " + Hold);
                 }
                 if (player.getyLoc() == length-1) {
                     System.out.println("Your move is invalid please try a different one!");
